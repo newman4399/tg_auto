@@ -4,3 +4,5 @@
 /tg_key.txt
 /.venv
 /.vscode
+/telegram_checkin.session
+/__pycache__

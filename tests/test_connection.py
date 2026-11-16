@@ -1,11 +1,19 @@
 import asyncio
 import logging
 from telethon import TelegramClient
-
+from config import (
+    TELEGRAM_API_ID,
+    TELEGRAM_API_HASH,
+    CHECKIN_TEXT,
+    CHECKIN_HOUR,
+    CHECKIN_MINUTE,
+    TIMEZONE,
+)
+API_ID = TELEGRAM_API_ID
+API_HASH = TELEGRAM_API_HASH
 logging.basicConfig(level=logging.DEBUG)
 
-API_ID = 你的_api_id
-API_HASH = "你的_api_hash"
+
 
 async def main():
     client = TelegramClient(
