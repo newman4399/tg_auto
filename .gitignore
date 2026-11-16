@@ -1,0 +1,5 @@
+/.env
+/.session
+/sessions
+/tg_key.txt
+/.venv
