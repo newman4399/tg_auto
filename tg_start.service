@@ -1,0 +1,17 @@
+[Unit]
+Description=My python background script
+# 如果脚本需要联网，加上下面两行，等网络就绪再启动
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu          # 换成你的用户名，不要随便root
+WorkingDirectory=/home/user  # 脚本所在目录
+Environment=PYTHONUNBUFFERED=1  # 日志实时输出，不缓存
+ExecStart=/usr/bin/python3 /home/ubuntu/my_script.py
+Restart=on-failure   # 脚本异常退出自动重启
+RestartSec=5         # 崩溃后等5秒再拉起
+
+[Install]
+WantedBy=multi-user.target
